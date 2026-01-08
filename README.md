@@ -139,9 +139,30 @@ _Utility-Based architecture introduces the "Utility Function," allowing the agen
 
 ### 3.5 Learning Agents
 
-The self-improving system.
+The most advanced architecture, capable of self-improvement. While other agents have fixed logic, a Learning Agent adapts and optimizes its behavior based on past performance.
 
-- _Concept:_ Consists of a **Learning Element** (improvement), **Performance Element** (action), **Critic** (feedback), and **Problem Generator** (exploration).
+#### The Four Components of Learning:
+
+1.  **Performance Element:** The component responsible for choosing external actions (equivalent to any of the previous agent types).
+2.  **Learning Element:** Responsible for making improvements to the Performance Element.
+3.  **Critic:** Observes the agent's performance and provides feedback based on a **fixed performance standard**.
+4.  **Problem Generator:** Suggests "exploratory" actions that lead to new experiences, even if they aren't immediately optimal.
+
+---
+
+## 🍴 Practical Case Study: The Restaurant Recommendation System
+
+_Based on the "Italian Food in a New City" scenario._
+
+To understand the progression of intelligence, let's see how different agents handle recommending an Italian restaurant:
+
+| Agent Type         | Logic Approach   | Recommendation Result                                                                          |
+| :----------------- | :--------------- | :--------------------------------------------------------------------------------------------- |
+| **Simple Reflex**  | Condition-Action | "If Italian, list all Italian spots." (No personal context).                                   |
+| **Model-Based**    | Internal State   | "List Italian spots + I remember you liked 'Luigi’s' last week."                               |
+| **Goal-Based**     | Search/Planning  | "Find an Italian spot that is **Cheap** and **Within walking distance**."                      |
+| **Utility-Based**  | Trade-offs       | "Weighing 4.5 stars vs. 20-min drive vs. $50 price to find the **best balance** for you."      |
+| **Learning Agent** | Feedback Loop    | "You hated the last spicy dish I suggested; I will now stop recommending spicy Italian spots." |
 
 ---
 
@@ -149,7 +170,8 @@ The self-improving system.
 
 - **Agent Function:** The mathematical mapping from a percept sequence to an action.
 - **Rationality:** The property of an agent that acts so as to maximize its performance measure.
-- **Omniscience:** Knowing the actual outcome of actions (Impossible in the real world, unlike Rationality).
+- **Omniscience:** Knowing the actual outcome of actions (Impossible in the real world).
+- **Exploration vs. Exploitation:** The balance between trying new things (Problem Generator) and doing what is known to work (Performance Element).
 
 ---
 

@@ -116,9 +116,26 @@ _Goal-Based architecture introduces "Search and Planning," allowing the agent to
 
 ### 3.4 Utility-Based Agents
 
-The peak of decision-making. Goal-based agents see the world as binary (Success vs. Failure), while Utility agents see it in **shades of quality**.
+The peak of sophistication in decision-making. While Goal-based agents focus on a binary "success" state, Utility-based agents ask: _"How well can I achieve my objectives?"_
 
-- _Concept:_ They use **Utility Functions** to find the _best_ possible path, balancing conflicting goals (e.g., speed vs. safety).
+#### The Concept of Preference & Quality
+
+A **Utility Function** maps a state (or sequence of states) onto a real number, which describes the "degree of happiness" or performance quality. This allows the agent to:
+
+1.  **Select the Optimal Path:** When multiple paths lead to a goal, it chooses the one with the highest utility (e.g., fastest or safest).
+2.  **Handle Conflicting Goals:** It can make rational trade-offs when goals conflict (e.g., speed vs. fuel efficiency).
+
+#### Architecture Logic Flow
+
+1.  **Sensors & State:** Perceive the environment and maintain the internal model.
+2.  **What it will be like if I do action A:** The agent predicts future states.
+3.  **Utility Function:** The agent assigns a "Happiness Score" to each predicted future state.
+4.  **Action Selection:** The agent chooses the action that **Maximizes Expected Utility**.
+5.  **Actuators:** Execute the chosen optimal action.
+
+![Utility-Based Agent Architecture](assets/utility_based_agent.png)
+
+_Utility-Based architecture introduces the "Utility Function," allowing the agent to quantify preferences and make complex trade-offs._
 
 ### 3.5 Learning Agents
 
